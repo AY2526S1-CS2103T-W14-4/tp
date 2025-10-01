@@ -9,7 +9,7 @@
         "project-team": "Project team",
         "dominique-xue-minjie": "Dominique (Xue Minjie)",
         "jane-doe": "Jane Doe",
-        "johnny-doe": "Johnny Doe",
+        "estelle-lim": "Estelle Lim",
         "pei-jingya": "Pei Jingya",
         "james-doe": "James Doe",
         "hasan-ahmed-nasif": "Hasan Ahmed Nasif"
@@ -139,6 +139,14 @@
     {
       "src": "team/dom.md",
       "title": "John Doe's Project Portfolio Page",
+      "headings": {
+        "project-addressbook-level-3": "Project: AddressBook Level 3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/estelle-ljgui.md",
+      "title": "Estelle Lim's Project Portfolio Page",
       "headings": {
         "project-addressbook-level-3": "Project: AddressBook Level 3"
       },
