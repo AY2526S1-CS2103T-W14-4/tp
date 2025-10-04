@@ -274,27 +274,33 @@ _{Explain here how the data archiving feature will be implemented}_
 
 **Target user profile**:
 
-* has a need to manage a significant number of contacts
+* volunteer organisation project director 
+* has a need to manage a significant number of contacts from team members, organisations and volunteers
+* has a need to keep track of liaisons
 * prefer desktop apps over other types
 * can type fast
 * prefers typing to mouse interactions
 * is reasonably comfortable using CLI apps
 
-**Value proposition**: manage contacts faster than a typical mouse/GUI driven app
-
+**Value proposition**: provide fast access to contact details of project team members, volunteers and organisations, track project updates
 
 ### User stories
 
 Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have) - `*`
 
-| Priority | As a …​                                    | I want to …​                 | So that I can…​                                                        |
-|----------|--------------------------------------------|------------------------------|------------------------------------------------------------------------|
-| `* * *`  | new user                                   | see usage instructions       | refer to instructions when I forget how to use the App                 |
-| `* * *`  | user                                       | add a new person             |                                                                        |
-| `* * *`  | user                                       | delete a person              | remove entries that I no longer need                                   |
-| `* * *`  | user                                       | find a person by name        | locate details of persons without having to go through the entire list |
-| `* *`    | user                                       | hide private contact details | minimize chance of someone else seeing them by accident                |
-| `*`      | user with many persons in the address book | sort persons by name         | locate a person easily                                                 |
+| Priority | As a …​ | I want to …​                  | So that I can…​                                      |
+|----------|--------------|------------------------------------|-----------------------------------------------------------|
+| `* *`    | new user     | see usage instructions             | refer to instructions when I forget how to use the App    |
+| `* * *`  | user         | add a new team member              |                                                           |
+| `* * *`  | user         | add a new organisation member      |                                                           |
+| `* * *`  | user         | add a new volunteer                |                                                           |
+| `* * *`  | user         | delete a person                    | remove contacts that I no longer need                     |
+| `* * *`  | user         | create a remark to update a person | remember that I need to update that person                |
+| `* * *`  | user         | complete an update for a person    | note that I have updated the person                       |
+| `* * *`  | user         | add a project                      | organise people who are involved in a project             |
+| `* * *`  | user         | assign a person to a project       | indicate that a person is involved in a project           |
+| `* * *`  | user         | remove a person from a project     | indicate that a person is no longer involved in a project |
+| `* * *`  | user         | view a project                     | easily find the details of everyone involved in a project |
 
 *{More to be added}*
 
