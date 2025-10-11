@@ -26,10 +26,10 @@ public class Person {
     private final Set<Tag> tags = new HashSet<>();
 
     /**
-     * Every field must be present and not null.
+     * Name, email and tags must be present and non null but phone and address can be null.
      */
     public Person(Name name, Phone phone, Email email, Address address, Set<Tag> tags) {
-        requireAllNonNull(name, phone, email, address, tags);
+        requireAllNonNull(name, email, tags);
         this.name = name;
         this.phone = phone;
         this.email = email;
