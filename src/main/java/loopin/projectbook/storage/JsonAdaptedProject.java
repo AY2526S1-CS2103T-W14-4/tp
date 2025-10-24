@@ -1,11 +1,14 @@
 package loopin.projectbook.storage;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import loopin.projectbook.commons.exceptions.IllegalValueException;
+import loopin.projectbook.model.person.Person;
 import loopin.projectbook.model.project.Description;
 import loopin.projectbook.model.project.Project;
 import loopin.projectbook.model.project.ProjectName;
@@ -19,6 +22,7 @@ class JsonAdaptedProject {
 
     private final String name;
     private final String description;
+    private final List<String> members = new ArrayList<>();
     private final LocalDateTime createdAt;
     private final LocalDateTime updatedAt;
 
@@ -28,12 +32,17 @@ class JsonAdaptedProject {
     @JsonCreator
     public JsonAdaptedProject(@JsonProperty("name") String name,
                               @JsonProperty("description") String description,
+                              @JsonProperty("members") List<String> members,
                               @JsonProperty("createdAt") LocalDateTime createdAt,
                               @JsonProperty("updatedAt") LocalDateTime updatedAt) {
         this.name = name;
         this.description = description;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+
+        if (members != null) {
+            this.members.addAll(members);
+        }
     }
 
     /**
@@ -44,6 +53,10 @@ class JsonAdaptedProject {
         description = source.getDescription().toString();
         createdAt = source.getCreatedAt();
         updatedAt = source.getUpdatedAt();
+
+        for (Person p : source.getAllPeople()) {
+            this.members.add(p.getEmail().value);
+        }
     }
 
     /**
@@ -73,4 +86,6 @@ class JsonAdaptedProject {
         return new Project(modelName, modelDescription);
     }
 
+    public String getName() { return name; }
+    public List<String> getMembers() { return members; }
 }

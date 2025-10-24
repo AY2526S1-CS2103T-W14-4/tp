@@ -54,12 +54,17 @@ class JsonSerializableProjectBook {
      */
     public ProjectBook toModelType() throws IllegalValueException {
         ProjectBook projectBook = new ProjectBook();
+        java.util.Map<String, Person> personsByEmail = new java.util.HashMap<>();
+        java.util.Map<String, Project> projectsByName = new java.util.HashMap<>();
+
+        // Add persons
         for (JsonAdaptedPerson jsonAdaptedPerson : persons) {
             Person person = jsonAdaptedPerson.toModelType();
             if (projectBook.hasPerson(person)) {
                 throw new IllegalValueException(MESSAGE_DUPLICATE_PERSON);
             }
             projectBook.addPerson(person);
+            personsByEmail.put(person.getEmail().value, person);
         }
 
         // Add projects
@@ -69,6 +74,23 @@ class JsonSerializableProjectBook {
                 throw new IllegalValueException(MESSAGE_DUPLICATE_PROJECT);
             }
             projectBook.addProject(project);
+            projectsByName.put(project.getName().toString(), project);
+        }
+
+        // Attach memberships
+        for (JsonAdaptedProject jsonAdaptedProject : projects) {
+            Project project = projectsByName.get(jsonAdaptedProject.getName());
+            if (project == null) {
+                continue;
+            }
+            for (String email : jsonAdaptedProject.getMembers()) {
+                Person p = personsByEmail.get(email);
+                if (p != null) {
+                    if (!project.hasMember(p)) {
+                        project.assignPerson(p);
+                    }
+                }
+            }
         }
 
         return projectBook;
