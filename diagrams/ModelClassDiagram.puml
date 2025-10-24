@@ -4,51 +4,95 @@ skinparam arrowThickness 1.1
 skinparam arrowColor MODEL_COLOR
 skinparam classBackgroundColor MODEL_COLOR
 
-Package Model as ModelPackage <<Rectangle>>{
-Class "<<interface>>\nReadOnlyAddressBook" as ReadOnlyAddressBook
-Class "<<interface>>\nReadOnlyUserPrefs" as ReadOnlyUserPrefs
-Class "<<interface>>\nModel" as Model
-Class AddressBook
-Class ModelManager
-Class UserPrefs
+package Model as ModelPackage <<Rectangle>> {
 
-Class UniquePersonList
-Class Person
-Class Address
-Class Email
-Class Name
-Class Phone
-Class Tag
+'==========================
+' Interfaces
+'==========================
+class "<<interface>>\nReadOnlyProjectBook" as ReadOnlyProjectBook
+class "<<interface>>\nReadOnlyUserPrefs" as ReadOnlyUserPrefs
+class "<<interface>>\nModel" as Model
 
-Class I #FFFFFF
+'==========================
+' Core Model Classes
+'==========================
+class ProjectBook
+class ModelManager
+class UserPrefs
+
+'==========================
+' Person-related Classes
+'==========================
+class UniquePersonList
+
+class Person {
+    - Name name
+    - Phone phone
+    - Email email
+    - Telegram telegram
+    - Set<Tag> tags
+    - List<Remark> remarks
+    - List<Project> projects
 }
 
-Class HiddenOutside #FFFFFF
-HiddenOutside ..> Model
+class Volunteer
 
-AddressBook .up.|> ReadOnlyAddressBook
+class TeamMember {
+    - Committee committee
+}
 
+class OrgMember {
+    - Organisation organisation
+}
+
+'==========================
+' Project-related Classes
+'==========================
+class UniqueProjectList
+
+class Project {
+    - ProjectName name
+    - Description description
+    - LocalDateTime createdAt
+    - LocalDateTime updatedAt
+    - List<Membership> memberships
+}
+}
+
+'==========================
+' Generalization / Interfaces
+'==========================
+ProjectBook .up.|> ReadOnlyProjectBook
 ModelManager .up.|> Model
-Model .right.> ReadOnlyUserPrefs
-Model .left.> ReadOnlyAddressBook
-ModelManager -left-> "1" AddressBook
-ModelManager -right-> "1" UserPrefs
 UserPrefs .up.|> ReadOnlyUserPrefs
 
-AddressBook *--> "1" UniquePersonList
+'==========================
+' ModelManager Relationships
+'==========================
+Model .right.> ReadOnlyUserPrefs
+Model .left.> ReadOnlyProjectBook
+ModelManager -left-> "1" ProjectBook
+ModelManager -right-> "1" UserPrefs
+
+'==========================
+' ProjectBook Composition
+'==========================
+ProjectBook *--> "1" UniquePersonList
+ProjectBook *--> "1" UniqueProjectList
+
 UniquePersonList --> "~* all" Person
-Person *--> Name
-Person *--> Phone
-Person *--> Email
-Person *--> Address
-Person *--> "*" Tag
+UniqueProjectList --> "~* all" Project
 
-Person -[hidden]up--> I
-UniquePersonList -[hidden]right-> I
+'==========================
+' Person Hierarchy
+'==========================
+Person <|-- Volunteer
+Person <|-- TeamMember
+Person <|-- OrgMember
 
-Name -[hidden]right-> Phone
-Phone -[hidden]right-> Address
-Address -[hidden]right-> Email
-
+'==========================
+' Filtered Lists (for GUI)
+'==========================
 ModelManager --> "~* filtered" Person
+ModelManager --> "~* filtered" Project
 @enduml
