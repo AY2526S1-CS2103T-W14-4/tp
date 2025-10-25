@@ -78,7 +78,7 @@ public class Person {
     }
 
     /**
-     * Returns true if both persons have the same name.
+     * Returns true if both persons have the same phone, email or telegram.
      * This defines a weaker notion of equality between two persons.
      */
     public boolean isSamePerson(Person otherPerson) {
@@ -88,13 +88,11 @@ public class Person {
             return false;
         }
 
-        boolean isSameName = otherPerson.getName().equals(getName());
-        boolean isSameRole = otherPerson.getRole().equals(getRole());
         boolean isSamePhone = otherPerson.getPhone().equals(getPhone());
         boolean isSameEmail = otherPerson.getEmail().equals(getEmail());
         boolean isSameTelegram = otherPerson.getTelegram().equals(getTelegram());
 
-        return (isSameName && isSameRole) || isSamePhone || isSameEmail || isSameTelegram;
+        return isSamePhone || isSameEmail || isSameTelegram;
     }
 
     // Add this method for duplicate checking in RemarkCommand
