@@ -113,6 +113,8 @@
         "quick-start": "Quick start",
         "features": "Features",
         "viewing-help-help": "Viewing help : help",
+        "making-a-remark-to-remember-to-update-a-person-list": "Making a remark to remember to update a person : list",
+        "resolving-a-remark-after-updating-the-person-list": "Resolving a remark after updating the person : list",
         "listing-all-persons-list": "Listing all persons : list",
         "editing-a-person-edit": "Editing a person : edit",
         "locating-persons-by-name-find": "Locating persons by name: find",
