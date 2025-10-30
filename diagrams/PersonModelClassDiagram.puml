@@ -1,0 +1,18 @@
+@startuml
+!include style.puml
+skinparam arrowThickness 1.1
+skinparam arrowColor MODEL_COLOR
+skinparam classBackgroundColor MODEL_COLOR
+
+abstract class Person
+class Volunteer
+class TeamMember
+class OrgMember
+
+Volunteer -up-|> Person
+TeamMember -up-|> Person
+OrgMember -up-|> Person
+
+TeamMember --> "1" Committee
+OrgMember --> "1" Organisation
+@enduml

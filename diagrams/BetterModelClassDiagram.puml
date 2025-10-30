@@ -4,18 +4,30 @@ skinparam arrowThickness 1.1
 skinparam arrowColor MODEL_COLOR
 skinparam classBackgroundColor MODEL_COLOR
 
-AddressBook *-right-> "1" UniquePersonList
-AddressBook *-right-> "1" UniqueTagList
-UniqueTagList -[hidden]down- UniquePersonList
-UniqueTagList -[hidden]down- UniquePersonList
+'==============================
+' Core model relationships
+'==============================
+AddressBook *-down-> "1" UniquePersonList
+AddressBook *-down-> "1" UniqueProjectList
 
-UniqueTagList -right-> "*" Tag
-UniquePersonList -right-> Person
+Class "{abstract}\nPerson" as Person
 
-Person -up-> "*" Tag
+UniquePersonList -down-> "*" Person
+UniqueProjectList -down-> "*" Project
 
-Person *--> Name
-Person *--> Phone
-Person *--> Email
-Person *--> Address
+Person -down-> "*" Remark
+
+Person *--> "1" Name
+Person *--> "1" Email
+Person --> "0..1" Phone
+Person --> "0..1" Telegram
+Person --> "1" Role
+Person --> "0..*" Project
+Project --> "0..*" Person
+
+
+Project *--> "1" ProjectName
+Project --> "0..1" Description
+Project --> "1" LastUpdate
+
 @enduml
