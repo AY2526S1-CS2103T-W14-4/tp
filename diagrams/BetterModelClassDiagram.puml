@@ -7,8 +7,8 @@ skinparam classBackgroundColor MODEL_COLOR
 '==============================
 ' Core model relationships
 '==============================
-AddressBook *-down-> "1" UniquePersonList
-AddressBook *-down-> "1" UniqueProjectList
+ProjectBook *-down-> "1" UniquePersonList
+ProjectBook *-down-> "1" UniqueProjectList
 
 Class "{abstract}\nPerson" as Person
 
