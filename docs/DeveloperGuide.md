@@ -785,4 +785,5 @@ Team size: 5
    `project edit` command that allows users to directly make changes to an existing project.
 
 8. Add `project edit` commands.
-Currently, projects cannot be edited once created. We plan to include this command to provide greater flexibility in managing project information.
+   Currently, projects cannot be edited once created. We plan to include this command to provide greater flexibility in
+   managing project information.

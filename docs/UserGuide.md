@@ -71,20 +71,14 @@ only typing required) interface.
 
 3. Now, let's add your first volunteer. Type:
    `addv n/John Doe p/98765432 e/johnd@example.com`
-
 4. Next, create a project for John to be a part of. Type:
    `project add project/Beach Cleanup d/Weekly cleanup at Siloso Beach`
-
 5. You should see John as Item 1 in the person list. Let's assign him to your new project. Type:
    `project assign 1 project/Beach Cleanup`
-
 6. To see a summary of the project and who's in it, type:
    `project view project/Beach Cleanup`
-
 7. To see all contacts in your book, type `list`.
-
 8. To see all projects, type `project list`.
-
 9. To exit the app, type `exit`.
 
 <box type="warning" seamless>
