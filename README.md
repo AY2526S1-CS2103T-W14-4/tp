@@ -34,7 +34,7 @@ General Features:
 
 # Usage (TODO)
 
-After installing and running the app, follow the on-screen instructions for a tutorial of the application. 
+After installing and running the app, follow the on-screen instructions for a tutorial of the application.
 
 ### First-time users
 
@@ -66,7 +66,7 @@ Steps to contribute:
 1. Open a pull request on GitHub.
 
 
-# Credits: 
+# Credits:
 * This project is based on the AddressBook-Level3 project created by the [SE-EDU initiative](https://se-education.org).
 * It is named `AddressBook Level 3` (`AB3` for short) because it was initially created as a part of a series of `AddressBook` projects (`Level 1`, `Level 2`, `Level 3` ...).
   Example usages:

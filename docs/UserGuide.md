@@ -1,9 +1,3 @@
----
-layout: default.md
-title: "User Guide"
-pageNav: 3
----
-
 # Loopin User Guide
 
 Loopin is a desktop app that helps project leaders **track team members, organisation partners, volunteers, and project updates** in one place. It is designed for project leads and coordinators, and friendly for first-time users via a CLI (only typing required) interface.
@@ -86,11 +80,9 @@ If you are using a PDF version of this document, be careful when copying and pas
 </box>
 
 Refer to the [Features](#features) below for details of each command.
-
 --------------------------------------------------------------------------------------------------------------------
 
 ## Features
-
 <box type="info" seamless>
 
 **Notes about the command format:**<br>
@@ -105,15 +97,11 @@ Refer to the [Features](#features) below for details of each command.
     
 * Items with `…` after them can be used multiple times including zero times.<br>
   e.g. `[u/UPDATE]…` can be used as ` ` (i.e. 0 times), `u/add to group chat`, `u/register in portal` etc.
-
 * Parameters can be in any order.<br>
   e.g. if the command specifies `n/NAME p/PHONE`, `p/PHONE n/NAME` is also acceptable.
-
 * Extraneous parameters for commands that do not take in parameters (such as `help`, `list`, `exit` and `clear`) will be ignored.<br>
   e.g. if the command specifies `help 123`, it will be interpreted as `help`.
-
 </box>
-
 <box type="tip" seamless>
 
  **Pro Tip: Command Chaining**
@@ -128,7 +116,6 @@ Refer to the [Features](#features) below for details of each command.
 </box>
 
 ### `help`: Viewing help
-
 Shows a message explaining how to access the help page. The link will bring you to a condensed cheatsheet of commands for your future reference!
 
 **Format:** `help`
@@ -234,7 +221,6 @@ Finds all persons in the project book whose role matches the specified role type
 * `findrole t` returns all Team Members.
 * `findrole v` returns all Volunteers.
 * `findrole o` returns all the Organisation Members.
-
 
 <box type="tip" seamless>
 

@@ -130,13 +130,13 @@ The **`Model`** component:
 
 * stores all data of the application, i.e.,
     - `Person` objects (contained in a `UniquePersonList`), and
-    - `Project` objects (contained in a `UniqueProjectList`).  
+    - `Project` objects (contained in a `UniqueProjectList`).
       These lists are contained within the `ProjectBook`.
 
-* keeps track of the currently _selected_ or _filtered_ lists of both `Person` and `Project` objects.  
+* keeps track of the currently _selected_ or _filtered_ lists of both `Person` and `Project` objects.
   These are exposed to other components as unmodifiable `ObservableList<Person>` and `ObservableList<Project>` objects, allowing the UI to automatically update when data changes.
 
-* stores a `UserPrefs` object that represents user preferences (e.g., GUI settings, file paths).  
+* stores a `UserPrefs` object that represents user preferences (e.g., GUI settings, file paths).
   These preferences are exposed externally as `ReadOnlyUserPrefs` to ensure immutability.
 
 * ensures data integrity by preventing duplicate entries through `UniquePersonList` and `UniqueProjectList`.
@@ -150,7 +150,7 @@ The **`Model`** component:
     - `TeamMember`: a team member belonging to a committee.
     - `OrgMember`: a person associated with an external organisation.
 
-* does not depend on other major components (e.g., Logic, UI, or Storage).  
+* does not depend on other major components (e.g., Logic, UI, or Storage).
   This separation ensures that the `Model` represents the core domain data and logic, independent of how the application interacts with users or files.
 
 [//]: # (<box type="info" seamless>)
@@ -339,7 +339,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 (For all use cases below, the **System** is the `Loopin` and the **Actor** is the `user`, unless specified otherwise)
 
-**Use Case: UC1 - Add Team Member** 
+**Use Case: UC1 - Add Team Member**
 (The use cases for add volunteer and organisation member are similar to this and will not be repeated)
 
 **MSS**
@@ -379,7 +379,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 * 1a. The given index is invalid.
 
   Use case ends.
-  
+
 
 **Use case: UC3 - Add Remark for Person Update**
 
@@ -657,14 +657,10 @@ testers are expected to do more *exploratory* testing.
        Expected: The app will be populated with sample data, similar to first launch.
 
 2. Dealing with corrupted data files
-    
     1. To simulate a corrupted data file, edit the file data/projectbook.json such that the data is invalid.
-
     2. Launch the app.
        Expected: The app will delete all data and start from an empty projectbook.
-
 --------------------------------------------------------------------------------------------------------------------
-
 ## **Appendix: Planned Enhancements**
 Team size: 5
 
