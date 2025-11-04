@@ -127,6 +127,8 @@
         "clear-clearing-all-entries": "clear: Clearing All Entries",
         "project-list-listing-all-projects": "project list: Listing All Projects",
         "project-add-adding-a-project": "project add: Adding a Project",
+        "project-delete-deleting-a-project": "project delete: Deleting a Project",
+        "project-view-viewing-a-project": "project view: Viewing a Project",
         "project-find-finding-projects": "project find: Finding Projects",
         "project-assign-assigning-a-person-to-a-project": "project assign: Assigning a Person to a Project",
         "project-remove-removing-a-person-from-a-project": "project remove: Removing a Person from a Project",
