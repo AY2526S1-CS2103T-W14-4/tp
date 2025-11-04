@@ -35,7 +35,7 @@ width="200px">
 
 <img src="images/estelle-ljgui.png" width="200px">
 
-[[github](http://github.com/estelle-ljgui)] 
+[[github](http://github.com/estelle-ljgui)]
 [[portfolio](team/estelle-ljgui.md)]
 
 * Role: Developer
