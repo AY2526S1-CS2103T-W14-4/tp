@@ -61,8 +61,10 @@
         "glossary": "Glossary",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
+        "adding-a-person": "Adding a person",
         "adding-a-project": "Adding a project",
-        "viewing-a-project": "Viewing a project",
+        "adding-a-remark-to-person": "Adding a remark to person",
+        "assigning-a-person-to-project": "Assigning a person to project",
         "deleting-a-person": "Deleting a person",
         "saving-data": "Saving data",
         "appendix-planned-enhancements": "Appendix: Planned Enhancements"
