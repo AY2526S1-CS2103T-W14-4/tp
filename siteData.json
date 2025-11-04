@@ -38,6 +38,7 @@
     },
     {
       "src": "DeveloperGuide.md",
+      "title": "Developer Guide",
       "headings": {
         "loopin-developer-guide": "Loopin Developer Guide",
         "acknowledgements": "Acknowledgements",
@@ -49,9 +50,8 @@
         "model-component": "Model component",
         "storage-component": "Storage component",
         "common-classes": "Common classes",
-        "implementation": "Implementation",
-        "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
-        "proposed-data-archiving": "[Proposed] Data archiving",
+        "implementation-of-future-features": "Implementation of future features",
+        "to-be-implemented-in-future-versions-undo-redo-feature": "[To be implemented in future versions] Undo/redo feature",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-requirements": "Appendix: Requirements",
         "product-scope": "Product scope",
@@ -64,7 +64,8 @@
         "adding-a-project": "Adding a project",
         "viewing-a-project": "Viewing a project",
         "deleting-a-person": "Deleting a person",
-        "saving-data": "Saving data"
+        "saving-data": "Saving data",
+        "appendix-planned-enhancements": "Appendix: Planned Enhancements"
       },
       "headingKeywords": {}
     },
@@ -106,8 +107,8 @@
     },
     {
       "src": "UserGuide.md",
+      "title": "User Guide",
       "headings": {
-        "layout-default-md-title-and-quot-user-guide-and-quot-pagenav-3": "layout: default.md\ntitle: &quot;User Guide&quot;\npageNav: 3",
         "loopin-user-guide": "Loopin User Guide",
         "command-summary": "Command Summary",
         "getting-started": "Getting Started",
@@ -116,27 +117,28 @@
         "features": "Features",
         "help-viewing-help": "help: Viewing help",
         "addv-addt-addo-adding-a-person-volunteer-teammember-organisationmember": "addv / addt / addo: Adding a Person (Volunteer, TeamMember, OrganisationMember)",
-        "remark-adding-a-remark": "remark: Adding a Remark",
-        "resolve-resolving-a-remark": "resolve: Resolving a Remark",
         "list-listing-all-persons": "list: Listing All Persons",
         "edit-editing-a-person": "edit: Editing a Person",
         "find-finding-persons": "find: Finding Persons",
         "findrole-finding-persons-by-role": "findrole: Finding Persons by Role",
+        "remark-adding-a-remark": "remark: Adding a Remark",
+        "resolve-resolving-a-remark": "resolve: Resolving a Remark",
         "delete-deleting-a-person": "delete: Deleting a Person",
         "clear-clearing-all-entries": "clear: Clearing All Entries",
         "project-list-listing-all-projects": "project list: Listing All Projects",
         "project-add-adding-a-project": "project add: Adding a Project",
         "project-delete-deleting-a-project": "project delete: Deleting a Project",
         "project-view-viewing-a-project": "project view: Viewing a Project",
+        "project-find-finding-projects": "project find: Finding Projects",
         "project-assign-assigning-a-person-to-a-project": "project assign: Assigning a Person to a Project",
         "project-remove-removing-a-person-from-a-project": "project remove: Removing a Person from a Project",
         "exit-exiting-the-program": "exit: Exiting the Program",
         "saving-the-data": "Saving the data",
         "editing-the-data-file": "Editing the data file",
-        "archiving-data-files-coming-in-v2-0": "Archiving data files [coming in v2.0]",
         "faq": "FAQ",
-        "q-how-do-i-transfer-my-data-to-another-computer-step-1-install-the-app-on-the-other-computer-step-2-make-a-new-folder-in-the-same-folder-as-the-app-and-name-it-data-step-3-copy-the-original-projectbook-json-located-in-the-data-folder-over-to-the-new-data-folder-step-4-you-are-ready-to-use-the-projectbook-like-before": "Q: How do I transfer my data to another Computer? \nStep 1: Install the app on the other computer \nStep 2: Make a new folder in the same folder as the app, and name it data\nStep 3: Copy the original projectbook.json located in the data folder over to the new data folder \nStep 4: You are ready to use the projectbook like before!",
-        "known-issues": "Known issues"
+        "q-how-do-i-transfer-my-data-to-another-computer-step-1-install-the-app-on-the-other-computer-step-2-make-a-new-folder-in-the-same-folder-as-the-app-and-name-it-data-step-3-copy-the-original-projectbook-json-located-in-the-data-folder-over-to-the-new-data-folder-step-4-you-are-ready-to-use-the-project-book-like-before": "Q: How do I transfer my data to another Computer? \nStep 1: Install the app on the other computer \nStep 2: Make a new folder in the same folder as the app, and name it data\nStep 3: Copy the original projectbook.json located in the data folder over to the new data folder \nStep 4: You are ready to use the project book like before!",
+        "known-issues": "Known issues",
+        "coming-in-future-versions": "Coming in Future Versions"
       },
       "headingKeywords": {}
     },
